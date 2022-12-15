@@ -1,0 +1,39 @@
+@import '../abstract/variaveis';
+
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(46, 46, 46, 0.6), rgba(46, 46, 46, 0.6)), url(../img/banner.png) center / cover no-repeat;
+    height: 500px;
+    width: 100%;
+
+    &__logo {
+        color: $branco;
+        font-weight: 600;
+        font-size: 96px;
+        line-height: 121px;
+
+        .amarelho {
+            color: $amarelo;
+        }
+
+        .vermelho {
+            color: $vermelho;
+        }
+
+        .verde {
+            color: $verde;
+        }
+
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cabecalho {
+        &__logo {
+            font-size: 48px;
+            line-height: 60px;
+        }
+    }
+}

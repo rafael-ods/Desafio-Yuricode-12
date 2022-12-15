@@ -1,0 +1,40 @@
+@import '../abstract/variaveis';
+
+
+.rodape {
+    background-color: $bg-branco;
+    padding: 1rem;
+    text-align: center;
+    .ct-rodape {
+        &__descricao {
+            color: $cinza;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        &__titulo {
+            color: $cinza-escuro;
+            font-size: 18px;
+            text-decoration: none;
+         
+        }
+        &__autor {
+            color: $amarelo;
+            text-transform: uppercase;
+        }
+       
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .rodape {
+        .ct-rodape {
+            &__descricao {
+                font-size: 14px;
+            }
+
+            &__titulo {
+                font-size: 15px;
+            }
+        }
+    }
+}

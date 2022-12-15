@@ -1,0 +1,153 @@
+@import '../abstract/variaveis';
+
+.sobre {
+    background-color: $bg-branco;
+    padding: 50px 0;
+
+    .ct-sobre {
+        max-width: 1220px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        .sobre-icon {
+            display: inline-block;
+            position: absolute;
+        }
+
+        .cereja {
+            background: url(../img/09.png) center / cover no-repeat;
+            width: 150px;
+            height: 133px;
+            right: 0;
+            top: -100px
+        }
+
+        .pizza {
+            background: url(../img/02.png) center / cover no-repeat;
+            width: 150px;
+            height: 151px;
+            right: 25px;
+            top: 356px;
+        }
+
+        .ct-imagens {
+            position: relative;
+
+            .imagem {
+                display: inline-block;
+            }
+
+            .img-grande {
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/image.png) center / cover no-repeat;
+                height: 501px;
+                width: 448px;
+            }
+
+            .img-pequena {
+                background: url(../img/05.png)center / cover no-repeat;
+                width: 150px;
+                height: 150px;
+                position: absolute;
+                left: -70px;
+                top: 19px;
+            }
+
+
+        }
+
+
+        .sobre-conteudo {
+            &__titulo {
+                color: $cinza-escuro;
+                font-weight: 600;
+                font-size: 36px;
+                line-height: 45px;
+
+                .amarelho {
+                    color: $amarelo;
+                }
+
+                .vermelho {
+                    color: $vermelho;
+                }
+
+                .verde {
+                    color: $verde;
+                }
+            }
+
+            &__descricao {
+                color: $cinza;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                margin: 24px 0;
+                width: 458px;
+            }
+
+            &__btn {
+                cursor: pointer;
+                color: $cinza-escuro;
+                background-color: $amarelo;
+                border-radius: 25px;
+                border: none;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 15px;
+                outline: none;
+                padding: 12px 40px;
+            }
+        }
+
+    }
+
+
+
+
+
+}
+
+@media screen and (max-width: 1024px) {
+    .sobre {
+        .ct-sobre {
+            flex-direction: column-reverse;
+            row-gap: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .sobre {
+        padding: 32px 20px;
+
+        .ct-sobre {
+            text-align: center;
+
+            .sobre-icon {
+                display: none;
+            }
+
+            .ct-imagens {
+                display: none;
+            }
+
+            .sobre-conteudo {
+                &__titulo {
+                    font-size: 22px;
+                    line-height: 28px;
+                }
+
+                &__descricao {
+                    text-align: center;
+                    font-size: 14px;
+                    line-height: 140%;
+                    width:auto;
+                }
+            }
+        }
+    }
+}
